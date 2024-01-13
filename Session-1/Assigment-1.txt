@@ -1,0 +1,7 @@
+1. Install NodeJS, NPM package
+2. Verify the Installation of NPM by running the command npm --version
+3. Create a new folder and inititalise as a NPM Project
+    Name: Introduction
+    Version: 1.0.0
+    Desc: Sample Project
+4. On this newly created project add the Express
