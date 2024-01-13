@@ -1,0 +1,2 @@
+1. You have to create a simple login form on a HTML page (username, password, reset, submit) and then on reset you have to fetch the values and reset them to "".
+2. You have to create a login form on the script without react
