@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Session - 3 Creating first React Component</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+    
+    <body>
+        <div id="app">
+
+        </div>
+        
+    </body>
+    <script>
+        function Greeting(){
+            return React.createElement("h1",{},"Hello World!");
+        }
+
+        ReactDOM.render(Greeting(),document.getElementById("app"));
+
+    </script>
+</html>
