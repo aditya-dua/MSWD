@@ -1,0 +1,6 @@
+Create an HTML page with basic HTML skeleton
+Add React, ReactDOM and Babel.
+Add script tag with babel jsx code in it
+Create a useDocumentTitle Hook which allows users to set the title of the document.
+Create a state variable name it title and set to document title using useDocumentTitle hook which you just created.
+Use input to set the title state variable which in turn sets the title

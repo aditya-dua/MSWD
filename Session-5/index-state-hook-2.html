@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Session -5 useState Hook</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id ="app"></div>
+
+       
+        
+    </body>
+    <script type="text/babel">
+
+        function Counter(){
+            const [message,setMessage]=React.useState("Hello World!");
+            const [count,setCount] = React.useState(0);
+
+            
+
+            return(
+                <div>
+                    <h1>{message}</h1>
+                    <p>Clicked {count} number of times</p>
+                    <button onClick={()=>setCount(count+1)}>Click Me</button>
+                </div>
+            )
+
+        }
+        ReactDOM.render (<Counter/>,document.getElementById("app"))
+
+    </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Session -5 useState Hook</title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id ="app"></div>
+
+       
+        
+    </body>
+    <script type="text/babel">
+
+        function App(props){
+            const [message,setMessage]= React.useState("Hello World");
+
+            return <h1>{message}</h1>
+        }
+
+        ReactDOM.render (<App/>,document.getElementById("app"))
+
+    </script>
+</html>
