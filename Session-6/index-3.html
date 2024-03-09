@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Session - 6 Controlled Component with Validation </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+        <script type = "text/babel">
+            function Form(){
+                const [username, setUsername]=React.useState("");
+                const [password, setPassword]=React.useState("");
+
+                function handleSubmit(e){
+                    e.preventDefault();
+                    if(username.trim()===""||password.trim()===""){
+                        console.error("Fields Cannot be empty");
+                        return;
+                    }
+                    console.log("Details "+username+" "+password);
+                }
+
+                return(
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                            type ="text" 
+                            placehold="Enter Username"
+                            value={username}
+                            onChange = {e=>setUsername(e.target.value)}/>
+
+                        <input 
+                            type ="text" 
+                            placehold="Enter Password"
+                            value={password}
+                            onChange = {e=>setPassword(e.target.value)}/>
+
+                        <input type="submit"/>              
+                    </form>
+                )
+            }
+
+            ReactDOM.render(<Form/>,document.getElementById("app"));
+        </script>
+    </body>
+</html>

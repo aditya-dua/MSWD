@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Session - 6 Controlled Component with Validation and Error Handling </title>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+        <script type = "text/babel">
+            function Form(){
+                const [username, setUsername]=React.useState("");
+                const [password, setPassword]=React.useState("");
+                const [errors,setErrors] = React.useState(null);
+
+                function getValidationErrors(){
+                    let validationErrors = [];
+                    if(username.trim() === "") validationErrors.push("Username cannot be empty");
+                    if(password.trim() === "") validationErrors.push("Password cannot be empty");
+                    
+                    return validationErrors;
+                }
+                function handleSubmit(e){
+                    e.preventDefault();
+                    const validationErrors = getValidationErrors();
+
+                    if(validationErrors.length >0){
+                        setErrors(validationErrors);
+                        return;
+                    }
+                    setErrors(null);
+                    setUsername("");
+                    setPassword("");
+                    console.log("Details "+username+" "+password);
+                }
+
+                return(
+                    <div>
+                        <form onSubmit={handleSubmit}>
+                        <input 
+                            type ="text" 
+                            placehold="Enter Username"
+                            value={username}
+                            onChange = {e=>setUsername(e.target.value)}/>
+
+                        <input 
+                            type ="text" 
+                            placehold="Enter Password"
+                            value={password}
+                            onChange = {e=>setPassword(e.target.value)}/>
+
+                        <input type="submit"/>              
+                        </form>
+
+                        <ul id="errors">
+                            {errors?errors.map((message,index) => <li key={index}>{message}</li>):null}
+                        </ul>
+                    </div>
+                    
+                )
+            }
+
+            ReactDOM.render(<Form/>,document.getElementById("app"));
+        </script>
+    </body>
+</html>

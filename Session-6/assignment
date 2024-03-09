@@ -1,0 +1,7 @@
+Create an HTML page with basic HTML skeleton
+Add React, ReactDOM and Babel.
+Add script tag with babel jsx code in it
+Create a form that takes username, password, email and mobile number
+Validate all of these
+If there is an error display them
+If not log the data submitted to the console
