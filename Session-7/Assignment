@@ -1,0 +1,7 @@
+Create a React app using npx creat-react-app command
+Add react-router-dom as a dependency t the app.
+In the app create two arrays to store data about users and posts
+Create Routes to display user info a list of title of posts created by particular user identified by that route
+Each title in the list of posts should be a link linking to the post being displayed right below the list
+If no posts are available, it should say no post found for current user
+If user found based on the route it should show no user found
